@@ -30,11 +30,10 @@ class UsersLoginController{
     });
     }
     async show(req, res){
-        const {user_id, email, password } = req.body;
-
-        res.json();
+        knex("users").select("*").then(response =>{
+            res.json(response)
+        })
     }
-
 }
 
 module.exports = UsersLoginController;
