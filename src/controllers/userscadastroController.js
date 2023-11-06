@@ -1,7 +1,7 @@
 const { hash, compare } = require("bcryptjs");
 const knex = require("../database/knex");
 
-class UsersController {
+class UsersCadastroController {
     async create(req, res) {
         let { user_id, email, password } = req.body;
 
@@ -26,16 +26,7 @@ class UsersController {
 
         res.json()
     }
-    async show(req, res) {
-
-        knex('users').select('*')
-  .then((results) => {
-    res.json(results);
-  })
-  .catch((err) => {
-    throw err;
-  });
-    }
+    
 }
 
-module.exports = UsersController;
+module.exports = UsersCadastroController;
