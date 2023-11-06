@@ -30,7 +30,6 @@ class UsersController {
         const { user_id, email, password} = req.body;
         const emailuser = await knex('users').where({ email}).first()
         res.send(`o usuario ${emailuser} acabou de entrar`)
-        res.json()
     }
 }
 
