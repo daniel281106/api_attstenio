@@ -7,8 +7,6 @@ const usersController = new UsersController();
 const usersRoutes = Router();
 
 usersRoutes.post("/", usersController.create);
-usersRoutes.get("/", (req, res) => {
-    res.send("oi")
-})
+usersRoutes.get("/", usersController.showUsers)
 
 module.exports = usersRoutes;

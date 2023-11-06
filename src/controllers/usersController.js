@@ -24,7 +24,14 @@ class UsersController {
             return res.status(500).json({ message: 'Failed to create the user' });
         }
 
-        res.send("oi");
+        res.json()
+    }
+    async showUsers(req, res) {
+        const { user_id, email, password} = req.body;
+
+        const usershow = await knex('users').where(user_id) 
+        res.json()
+        res.send(usershow)
     }
 }
 
