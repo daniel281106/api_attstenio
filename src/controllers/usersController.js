@@ -24,7 +24,7 @@ class UsersController {
             return res.status(500).json({ message: 'Failed to create the user' });
         }
 
-        res.send(json({ message: 'User created successfully' }));
+        res.send("oi");
     }
 }
 
