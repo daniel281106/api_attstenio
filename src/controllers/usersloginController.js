@@ -32,7 +32,7 @@ class UsersLoginController{
     async show(req, res){
         const {user_id, email, password } = req.body;
 
-        res.json({user_id, email, password});
+        res.json();
     }
 
 }
