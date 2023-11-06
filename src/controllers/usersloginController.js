@@ -29,6 +29,11 @@ class UsersLoginController{
       res.status(400).json('Erro no login');
     });
     }
+    async show(req, res){
+        const {user_id, email, password } = req.body;
+
+        res.json({user_id, email, password});
+    }
 
 }
 
