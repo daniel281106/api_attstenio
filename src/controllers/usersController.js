@@ -29,9 +29,8 @@ class UsersController {
     async showUsers(req, res) {
         const { user_id, email, password} = req.body;
 
-        const usershow = await knex('users').where(user_id) 
+        res.send(`o usuario ${email} acabou de entrar`)
         res.json()
-        res.send(usershow)
     }
 }
 
