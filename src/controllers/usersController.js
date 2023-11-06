@@ -26,7 +26,16 @@ class UsersController {
 
         res.json()
     }
-    
+    async show(req, res) {
+
+        knex('users').select('*')
+  .then((results) => {
+    res.json(results);
+  })
+  .catch((err) => {
+    throw err;
+  });
+    }
 }
 
 module.exports = UsersController;
