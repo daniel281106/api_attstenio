@@ -33,7 +33,8 @@ class UsersLoginController{
         knex("users").select("*").then(response =>{
             res.json(response)
         })
-    }
+
 }
+};
 
 module.exports = UsersLoginController;
