@@ -30,14 +30,9 @@ class UsersLoginController {
       });
   }
   async show(req, res) {
-    const { email, password } = req.body;
-    knex.select('email', 'password')
-      .from('users')
-      .where('email', '=', email)
-    const token = jwt.sign({ email }, 'seuSegredo');
-    res.json(token);
-
-
+    knex("users").select("*").then(response =>{
+      res.json(response)
+  })
   }
 };
 
