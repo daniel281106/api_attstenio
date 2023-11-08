@@ -16,7 +16,7 @@ class UsersLoginController{
         const isValid = bcrypt.compareSync(password, data[0].password);
         if (isValid) {
           const token = jwt.sign({ email }, 'seuSegredo');
-          res.json(token);
+          console.log(res.json(token));
         } else {
           res.status(400).json('Credenciais incorretas');
         }
@@ -30,9 +30,8 @@ class UsersLoginController{
     });
     }
     async show(req, res){
-        knex("users").select("*").then(response =>{
-            res.json(response)
-        })
+      const { token } = req.body;
+        res.json(token)
 
 }
 };
