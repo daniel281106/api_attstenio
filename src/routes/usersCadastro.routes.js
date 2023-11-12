@@ -7,6 +7,6 @@ const userscadastroController = new UsersController();
 const usersCadastroRoutes = Router();
 
 usersCadastroRoutes.post("/", userscadastroController.create);
-usersCadastroRoutes.get("/", userscadastroController.show);
+
 
 module.exports = usersCadastroRoutes;

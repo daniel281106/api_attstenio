@@ -7,7 +7,7 @@ const usersLogin = new UserLogin()
 const usersLoginRouter = Router();
 
 usersLoginRouter.post("/", usersLogin.login)
-usersLoginRouter.get("/", usersLogin.show)
+
 
 
 

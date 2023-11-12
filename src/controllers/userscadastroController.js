@@ -26,11 +26,6 @@ class UsersCadastroController {
 
         res.json()
     }
-    async show(req, res){
-        knex("users").select("*").then(response =>{
-            res.json(response)
-        })
-    }
     
 }
 

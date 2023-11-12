@@ -29,11 +29,7 @@ class UsersLoginController {
         res.status(400).json('Erro no login');
       });
   }
-  async show(req, res) {
-    knex("users").select("*").then(response =>{
-      res.json(response)
-  })
-  }
+ 
 };
 
 module.exports = UsersLoginController;
